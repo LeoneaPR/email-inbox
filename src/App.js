@@ -9,6 +9,13 @@ function App() {
         <p>
           Davai <code>Leonea app</code> suka.
         </p>
+        <p>
+          Davai <code>Leonea app</code> suka.
+        </p>
+        <p>
+          Davai <code>Leonea app</code> suka.
+        </p>
+        
         <a
           className="App-link"
           href="https://reactjs.org"
