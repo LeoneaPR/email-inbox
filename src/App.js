@@ -1,32 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Sidebar from './components/Sidebar/Sidebar';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Profile from './components/Profile/Profile';
+import Dialogs from "./components/Dialogs/Dialogs";
+import { Route, Routes} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Davai <code>Leonea app</code> suka.
-        </p>
-        <p>
-          Davai <code>Leonea app</code> suka.
-        </p>
-        <p>
-          Davai <code>Leonea app</code> suka.
-        </p>
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = (props) => {
+    return (
+
+        <div className='AppWrapper'>
+            <Sidebar/>
+            <Header/>
+            <Footer/>
+            <div className='AppWrapper-profile'>
+                <Routes>
+                    <Route path='/dialogs' element={<Dialogs state={props.state.messagePage}/>}/>
+                    <Route path='/profile' element={<Profile state={props.state.profilePage} dispatch={props.dispatch}/>}/>
+                </Routes>
+            </div>
+
+
+        </div>
+
+    )
 }
 
 export default App;

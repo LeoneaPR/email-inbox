@@ -1,0 +1,15 @@
+.sidebar{
+    grid-area: s;
+    background-color: yellow;
+}
+.item{
+    padding: 15px;
+
+}
+.item a {
+    color: black;
+    text-decoration: none;
+}
+.item a.activeLink{
+color: white;
+}
